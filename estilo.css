@@ -1,0 +1,96 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100vh;
+	background-color: #bf8639;
+}
+div#dialogo{
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.6);
+}
+div#dialogo > div{
+	background-color: white;
+	margin: 10% 20%;
+	height: 50%;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+}
+div#dialogo > div > div:nth-of-type(1){
+	display: grid;
+}
+div#dialogo > div > div:nth-of-type(2){
+	font-family: arial;
+  font-size: 1.3rem;
+  padding: 4rem 1rem;
+}
+div#dialogo img{
+	width: 95%;
+	margin: auto;
+}
+div#estado{
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+div#estado img{
+	height: 1.5rem;
+}
+div#puntos{
+	grid-column: 1;
+	grid-row: 2;
+
+	font-family: arial;
+	color: yellow;
+	font-size: 2rem;
+	font-weight: bold;
+}
+div#neumaticos{
+	grid-column: 2;
+	grid-row: 1;
+	text-align: right;
+}
+div#combustible{
+	grid-column: 2;
+	grid-row: 2;
+	text-align: right;
+}
+div#neumaticos > div, div#combustible > div{
+	display: inline-block;
+	width: 80%;
+	height: 1rem;
+	border: 2px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+}
+div#neumaticos > div > div{
+	background-color: #555555;
+	height: 1rem;
+}
+div#combustible > div > div{
+	background-color: #ec7063;
+	height: 1rem;
+}
+div#fondo{
+	width: 80%;
+	height: 90%;
+	border: 10px solid black;
+	border-radius: 10px;
+	opacity: 0.8;
+	background: repeating-linear-gradient( 45deg, #ff0000, #ff0000 10px, #ffffff 5px, #ffffff 25px );
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+canvas {
+	border: 5px solid #000;
+	background-color: white;
+	border-radius: 5px;
+	width: 95%;
+	height: 95%;
+}

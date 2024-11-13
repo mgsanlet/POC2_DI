@@ -32,6 +32,49 @@ class SnakeRaceController {
 		//Centrar coche
 		this.cabeza.posX = this.cabeza.x * this.view.ladoX
 		this.cabeza.posY = this.cabeza.y * this.view.ladoY
+		// Inicializar SpeechRecognition
+		this.reconocimiento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+		this.reconocimiento.lang = 'es-ES'; // Configurar idioma
+		this.reconocimiento.continuous = true; // Reconocimiento continuo
+		this.reconocimiento.interimResults = false; // Solo resultados finales
+		// Asociar el evento onresult a la función que maneja los comandos de voz
+		this.reconocimiento.onresult = this.manejarResultado.bind(this);
+		// Agregar eventos de depuración
+		this.reconocimiento.onstart = () => console.log("Reconocimiento de voz iniciado.");
+		this.reconocimiento.onend = () => console.log("Reconocimiento de voz finalizado.");
+		this.reconocimiento.onerror = (event) => console.error("Error en el reconocimiento de voz:", event.error);
+		this.reconocimiento.onresult = this.manejarResultado.bind(this);
+	}
+
+	// Solicitar permiso para acceder al micrófono
+	solicitarPermisoMicrofono() {
+		navigator.mediaDevices.getUserMedia({ audio: true })
+			.then(stream => {
+				console.log("Acceso al micrófono permitido.");
+				// Iniciar el reconocimiento de voz
+				this.iniciarReconocimiento();
+			})
+			.catch(error => {
+				console.error("Acceso al micrófono denegado o no disponible:", error);
+				alert("No se puede acceder al micrófono. Asegúrate de que está habilitado en tu navegador.");
+			});
+	}
+
+	// Iniciar el reconocimiento de voz
+	iniciarReconocimiento() {
+		this.reconocimiento.start();
+		console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
+	}
+
+	// Función para manejar los resultados del reconocimiento de voz
+	manejarResultado(evento) {
+		const resultado = evento.results[evento.results.length - 1][0].transcript.trim().toLowerCase();
+		console.log("Comando de voz detectado:", resultado);
+
+		// Llamar a ordenarMovimiento si el comando es válido
+		if (['arriba', 'derecha', 'abajo', 'izquierda'].includes(resultado)) {
+			this.ordenarMovimiento(resultado);
+		}
 	}
 
 	iniciar = () => {
@@ -42,6 +85,8 @@ class SnakeRaceController {
 		this.interval = setInterval(this.actualizar, this.vel)
 		this.bucle()
 		console.log("Controlador Iniciado")
+		// Solicitar permiso y comenzar reconocimiento de voz
+		this.solicitarPermisoMicrofono();
 	}
 
 	crear = (objeto) => {

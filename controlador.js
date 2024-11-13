@@ -4,7 +4,7 @@ class SnakeRaceController {
 	constructor() {
 		this.view = new SnakeRaceView(this)
 		
-		this.vel = 10 //Velocidad del juego (inverso)
+		this.vel = 0.2 //Velocidad del juego (inverso)
 		//Posición inicial de la cabeza
 		this.cabeza = {
 			//Posición de tablero a la que vamos
@@ -32,16 +32,16 @@ class SnakeRaceController {
 		//Centrar coche
 		this.cabeza.posX = this.cabeza.x * this.view.ladoX
 		this.cabeza.posY = this.cabeza.y * this.view.ladoY
+		
 		// Inicializar SpeechRecognition
 		this.reconocimiento = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 		this.reconocimiento.lang = 'es-ES'; // Configurar idioma
-		this.reconocimiento.continuous = true; // Reconocimiento continuo
 		this.reconocimiento.interimResults = false; // Solo resultados finales
 		// Asociar el evento onresult a la función que maneja los comandos de voz
 		this.reconocimiento.onresult = this.manejarResultado.bind(this);
 		// Agregar eventos de depuración
-		this.reconocimiento.onstart = () => console.log("Reconocimiento de voz iniciado.");
-		this.reconocimiento.onend = () => console.log("Reconocimiento de voz finalizado.");
+		//this.reconocimiento.onstart = () => console.log("Reconocimiento de voz iniciado.");
+		this.reconocimiento.onend = () => this.iniciarReconocimiento();
 		this.reconocimiento.onerror = (event) => console.error("Error en el reconocimiento de voz:", event.error);
 		this.reconocimiento.onresult = this.manejarResultado.bind(this);
 	}
@@ -218,7 +218,7 @@ class SnakeRaceController {
 	// Iniciar el reconocimiento de voz
 	iniciarReconocimiento() {
 		this.reconocimiento.start();
-		console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
+		//console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
 	}
 
 	// Función para manejar los resultados del reconocimiento de voz
@@ -231,6 +231,7 @@ class SnakeRaceController {
 				this.ordenarMovimiento(comando);
 			}
 		})
+		//Reiniciamos el reconocimiento una vez terminada la orden
 	}
 
 	//leerMensaje = ( msj ) => {}

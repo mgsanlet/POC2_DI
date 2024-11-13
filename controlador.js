@@ -234,7 +234,22 @@ class SnakeRaceController {
 		//Reiniciamos el reconocimiento una vez terminada la orden
 	}
 
-	//leerMensaje = ( msj ) => {}
+	leerMensaje = ( msj ) => {
+    const utterance = new SpeechSynthesisUtterance(msj);
+
+        // Opcional: Configurar el idioma
+        utterance.lang = 'es-ES'; // Cambia 'es-ES' a tu idioma preferido
+
+        // Opcional: Configurar el volumen, velocidad y tono
+        utterance.volume = 1; // Rango de 0 a 1
+        utterance.rate = 1;   // Rango de 0.1 a 10
+        utterance.pitch = 1;  // Rango de 0 a 2
+
+        // Reproducir el mensaje
+        if("speechSynthesis" in window){
+            window.speechSynthesis.speak(utterance);
+        }else console.log("EL navegador no soporta la síntesis de vod de web speech")
+	}
 
 	finalizar = (tipo) => {
 		console.log('FIN ' + tipo)

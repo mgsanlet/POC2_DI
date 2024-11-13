@@ -118,7 +118,7 @@ class SnakeRaceView {
 				break;
 		}
 		divTexto.textContent = msj
-		//this.controller.leerMensaje(msj)
+		this.controller.leerMensaje(msj)
 		this.divDialogo.style.display = 'block'
 	}
 }

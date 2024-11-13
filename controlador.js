@@ -12,7 +12,7 @@ class SnakeRaceController {
 			y: parseInt(this.view.alto / 2),
 			dir: 1, //0:arriba, 1:derecha, 2:abajo, 3:izquierda
 			giro: 1, //dirección del siguiente giro
-			vel: 2,
+			vel: 0.2,
 			//Posición del canvas
 			posX: null,
 			posY: null,
@@ -44,37 +44,6 @@ class SnakeRaceController {
 		this.reconocimiento.onend = () => console.log("Reconocimiento de voz finalizado.");
 		this.reconocimiento.onerror = (event) => console.error("Error en el reconocimiento de voz:", event.error);
 		this.reconocimiento.onresult = this.manejarResultado.bind(this);
-	}
-
-	// Solicitar permiso para acceder al micrófono
-	solicitarPermisoMicrofono() {
-		navigator.mediaDevices.getUserMedia({ audio: true })
-			.then(stream => {
-				console.log("Acceso al micrófono permitido.");
-				// Iniciar el reconocimiento de voz
-				this.iniciarReconocimiento();
-			})
-			.catch(error => {
-				console.error("Acceso al micrófono denegado o no disponible:", error);
-				alert("No se puede acceder al micrófono. Asegúrate de que está habilitado en tu navegador.");
-			});
-	}
-
-	// Iniciar el reconocimiento de voz
-	iniciarReconocimiento() {
-		this.reconocimiento.start();
-		console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
-	}
-
-	// Función para manejar los resultados del reconocimiento de voz
-	manejarResultado(evento) {
-		const resultado = evento.results[evento.results.length - 1][0].transcript.trim().toLowerCase();
-		console.log("Comando de voz detectado:", resultado);
-
-		// Llamar a ordenarMovimiento si el comando es válido
-		if (['arriba', 'derecha', 'abajo', 'izquierda'].includes(resultado)) {
-			this.ordenarMovimiento(resultado);
-		}
 	}
 
 	iniciar = () => {
@@ -179,8 +148,8 @@ class SnakeRaceController {
 			this.crear(this.lata)
 		}
 		//Comprobar estado
-		this.neumaticos -= this.vel / 1000 * 3
-		this.combustible -= this.vel / 1000 * 2
+		this.neumaticos -= this.vel / 1000
+		this.combustible -= this.vel / 1000
 		if (this.neumaticos < 0 || this.combustible < 0) this.finalizar(2)
 
 		this.view.actualizarIndicadores(this.neumaticos, this.combustible)
@@ -230,6 +199,38 @@ class SnakeRaceController {
 		const barrera = { x: null, y: null }
 		this.barreras.push(barrera)
 		this.crear(barrera)
+	}
+
+	// Solicitar permiso para acceder al micrófono
+	solicitarPermisoMicrofono() {
+		navigator.mediaDevices.getUserMedia({ audio: true })
+			.then(stream => {
+			console.log("Acceso al micrófono permitido.");
+			// Iniciar el reconocimiento de voz
+			this.iniciarReconocimiento();
+		})
+			.catch(error => {
+			console.error("Acceso al micrófono denegado o no disponible:", error);
+			alert("No se puede acceder al micrófono. Asegúrate de que está habilitado en tu navegador.");
+		});
+	}
+
+	// Iniciar el reconocimiento de voz
+	iniciarReconocimiento() {
+		this.reconocimiento.start();
+		console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
+	}
+
+	// Función para manejar los resultados del reconocimiento de voz
+	manejarResultado(evento) {
+		const resultado = evento.results[evento.results.length - 1][0].transcript.trim().toLowerCase();
+		console.log("Comando de voz detectado:", resultado);
+		const comandos = ['arriba', 'derecha', 'abajo', 'izquierda']
+		comandos.forEach( (comando) => {
+			if (resultado.includes(comando)){
+				this.ordenarMovimiento(comando);
+			}
+		})
 	}
 
 	//leerMensaje = ( msj ) => {}

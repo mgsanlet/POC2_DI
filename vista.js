@@ -104,7 +104,7 @@ class SnakeRaceView {
 	mostrarFinal(tipo) {
 		const img = document.getElementById('imgFinal')
 		const divTexto = this.divDialogo.querySelectorAll('div')[2]
-		const msj = ''
+		let msj = ''
 		switch(tipo){
 			case 0: //Colisión con bordes
 				img.src = this.imgChoque1.src

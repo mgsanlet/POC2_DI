@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
+    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731434327806</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt">
+      <option name="closed" value="true" />
+      <created>1731434810545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731434810545</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -99,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
   </component>
 </project>

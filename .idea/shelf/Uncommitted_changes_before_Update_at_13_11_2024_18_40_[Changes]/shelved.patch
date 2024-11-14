@@ -1,0 +1,46 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"015ae13d-3844-4b48-bca7-b268525d8885\" name=\"Changes\" comment=\"Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;mgsanlet&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/mgsanlet/POC2_DI.git&quot;,\r\n    &quot;accountId&quot;: &quot;2b1f2446-8f59-44d6-8662-881278b18e0a&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2oibo3MueMh6vQk5VIytXyQj7mR\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/POC2_DI&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"POC2_DI\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"POC2_DI\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"015ae13d-3844-4b48-bca7-b268525d8885\" name=\"Changes\" comment=\"\" />\r\n      <created>1731355517275</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1731355517275</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731355764062</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731355764062</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Initial Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731434327806</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731434327806</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Patron mvc aplicado y creacion de contexto para llamadas a tts y stt\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731434810545</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731434810545</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731512105588</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731512105588</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"com.intellij.fileTypeFactory\" implementationName=\"*.js\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial Commit\" />\r\n    <MESSAGE value=\"Patron mvc aplicado y creacion de contexto para llamadas a tts y stt\" />\r\n    <MESSAGE value=\"Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b51002f49b4ed85aff86e96ef618e52203e606ef)
++++ b/.idea/workspace.xml	(date 1731519180924)
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
++    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="continuo anulado para detección one-shot" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -107,7 +107,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1731512105588</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="continuo anulado para detección one-shot">
++      <option name="closed" value="true" />
++      <created>1731519166803</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1731519166803</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="UnknownFeatures">
+@@ -117,6 +125,7 @@
+     <MESSAGE value="Initial Commit" />
+     <MESSAGE value="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
+     <MESSAGE value="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
++    <MESSAGE value="continuo anulado para detección one-shot" />
++    <option name="LAST_COMMIT_MESSAGE" value="continuo anulado para detección one-shot" />
+   </component>
+ </project>
+\ No newline at end of file

@@ -1,8 +1,8 @@
-import { SnakeRaceView } from './vista.js'
+import { SnakeRaceVista } from './vista.js'
 
-class SnakeRaceController {
+class SnakeRaceControlador {
 	constructor() {
-		this.view = new SnakeRaceView(this)
+		this.view = new SnakeRaceVista(this)
 		
 		this.vel = 0.2 //Velocidad del juego (inverso)
 		//Posición inicial de la cabeza
@@ -28,7 +28,7 @@ class SnakeRaceController {
 		this.neumaticos = 100
 		this.combustible = 100
 		//Inicializar vista
-		this.view.init()
+		this.view.iniciar()
 		//Centrar coche
 		this.cabeza.posX = this.cabeza.x * this.view.ladoX
 		this.cabeza.posY = this.cabeza.y * this.view.ladoY
@@ -38,12 +38,11 @@ class SnakeRaceController {
 		this.reconocimiento.lang = 'es-ES'; // Configurar idioma
 		this.reconocimiento.interimResults = false; // Solo resultados finales
 		// Asociar el evento onresult a la función que maneja los comandos de voz
-		this.reconocimiento.onresult = this.manejarResultado.bind(this);
+		this.reconocimiento.onresult = this.manejarResultado;
 		// Agregar eventos de depuración
 		//this.reconocimiento.onstart = () => console.log("Reconocimiento de voz iniciado.");
 		this.reconocimiento.onend = () => this.iniciarReconocimiento();
 		this.reconocimiento.onerror = (event) => console.error("Error en el reconocimiento de voz:", event.error);
-		this.reconocimiento.onresult = this.manejarResultado.bind(this);
 	}
 
 	iniciar = () => {
@@ -148,8 +147,8 @@ class SnakeRaceController {
 			this.crear(this.lata)
 		}
 		//Comprobar estado
-		this.neumaticos -= this.vel / 1000
-		this.combustible -= this.vel / 1000
+		this.neumaticos -= this.vel / 1000 * 3
+		this.combustible -= this.vel / 1000 * 2
 		if (this.neumaticos < 0 || this.combustible < 0) this.finalizar(2)
 
 		this.view.actualizarIndicadores(this.neumaticos, this.combustible)
@@ -222,7 +221,7 @@ class SnakeRaceController {
 	}
 
 	// Función para manejar los resultados del reconocimiento de voz
-	manejarResultado(evento) {
+	manejarResultado = (evento) => {
 		const resultado = evento.results[evento.results.length - 1][0].transcript.trim().toLowerCase();
 		console.log("Comando de voz detectado:", resultado);
 		const comandos = ['arriba', 'derecha', 'abajo', 'izquierda']
@@ -260,5 +259,5 @@ class SnakeRaceController {
 	}
 }
 
-export default SnakeRaceController
-window.onload = () => { new SnakeRaceController() }
+export default SnakeRaceControlador
+window.onload = () => { new SnakeRaceControlador() }

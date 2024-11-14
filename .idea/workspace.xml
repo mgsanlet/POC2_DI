@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt">
+    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="continuo anulado para detección one-shot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlador.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,15 +44,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/POC2_DI&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/xampp/htdocs/POC2_DI",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="POC2_DI" />
@@ -103,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731434810545</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras">
+      <option name="closed" value="true" />
+      <created>1731512105588</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731512105588</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -112,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
+    <MESSAGE value="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
   </component>
 </project>

@@ -1,6 +1,6 @@
-class SnakeRaceView {
-	constructor(controller) {
-		this.controller = controller
+class SnakeRaceVista {
+	constructor(controlador) {
+		this.controlador = controlador
 		this.contenedor = document.getElementById('fondo')
 		this.canvas = document.getElementsByTagName('canvas')[0]
 		this.ctx = this.canvas.getContext('2d')
@@ -32,14 +32,14 @@ class SnakeRaceView {
 		this.cargarImagenes()
 	}
 
-	init() {
+	iniciar() {
 		//Calculamos el tamaño de celda
 		this.canvas.width = this.contenedor.getBoundingClientRect().width
 		this.canvas.height = this.contenedor.getBoundingClientRect().height
 		this.ladoX = this.canvas.width / this.ancho
 		this.ladoY = this.canvas.height / this.alto
 		
-		this.controller.iniciar()
+		this.controlador.iniciar()
 		console.log("Vista iniciada")
 	}
 
@@ -118,9 +118,9 @@ class SnakeRaceView {
 				break;
 		}
 		divTexto.textContent = msj
-		this.controller.leerMensaje(msj)
+		leer = this.controlador.leerMensaje(msj)
 		this.divDialogo.style.display = 'block'
 	}
 }
 
-export { SnakeRaceView }
+export { SnakeRaceVista }

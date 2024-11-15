@@ -105,7 +105,7 @@ class SnakeRaceControlador {
 	ordenarMovimiento = (direccion) => {
 		const direcciones = ['arriba', 'derecha', 'abajo', 'izquierda'];
 		
-		const index = direcciones.indexOf(direccion); // Encuentra el índice de la dirección
+		const index = direcciones.indexOf(direccion); // Encuentra el índice de la dirección, devuelve -1 si no está
 		if (index === -1) return; // Si la dirección no es válida, salimos del método
 
 		// Controlamos el giro basado en la dirección actual y la nueva dirección
@@ -234,19 +234,19 @@ class SnakeRaceControlador {
 	}
 
 	leerMensaje = ( msj ) => {
-    const utterance = new SpeechSynthesisUtterance(msj);
+    const voz = new SpeechSynthesisUtterance(msj);
 
         // Opcional: Configurar el idioma
-        utterance.lang = 'es-ES'; // Cambia 'es-ES' a tu idioma preferido
+        voz.lang = 'es-ES'; // Cambia 'es-ES' a tu idioma preferido
 
         // Opcional: Configurar el volumen, velocidad y tono
-        utterance.volume = 1; // Rango de 0 a 1
-        utterance.rate = 1;   // Rango de 0.1 a 10
-        utterance.pitch = 1;  // Rango de 0 a 2
+        voz.volume = 1; // Rango de 0 a 1
+        voz.rate = 1;   // Rango de 0.1 a 10
+        voz.pitch = 1;  // Rango de 0 a 2
 
         // Reproducir el mensaje
         if("speechSynthesis" in window){
-            window.speechSynthesis.speak(utterance);
+            window.speechSynthesis.speak(voz);
         }else console.log("EL navegador no soporta la síntesis de vod de web speech")
 	}
 

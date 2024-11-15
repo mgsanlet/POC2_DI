@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="continuo anulado para detección one-shot">
+    <list default="true" id="015ae13d-3844-4b48-bca7-b268525d8885" name="Changes" comment="descuido leerMsj arreglado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador.js" beforeDir="false" afterPath="$PROJECT_DIR$/controlador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +48,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/xampp/htdocs/POC2_DI",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -108,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731512105588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="descuido leerMsj arreglado">
+      <option name="closed" value="true" />
+      <created>1731701484300</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731701484300</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -118,6 +131,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Patron mvc aplicado y creacion de contexto para llamadas a tts y stt" />
     <MESSAGE value="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
-    <option name="LAST_COMMIT_MESSAGE" value="Velocidad ajustada para dar tiempo al reconocimiento de voz. Reconocimiento ajustado con include para reconocer comandos incluidos entre más palabras" />
+    <MESSAGE value="descuido leerMsj arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="descuido leerMsj arreglado" />
   </component>
 </project>

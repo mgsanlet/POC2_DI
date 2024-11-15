@@ -118,7 +118,7 @@ class SnakeRaceVista {
 				break;
 		}
 		divTexto.textContent = msj
-		leer = this.controlador.leerMensaje(msj)
+		this.controlador.leerMensaje(msj)
 		this.divDialogo.style.display = 'block'
 	}
 }

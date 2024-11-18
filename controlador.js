@@ -147,8 +147,8 @@ class SnakeRaceControlador {
 			this.crear(this.lata)
 		}
 		//Comprobar estado
-		this.neumaticos -= this.vel / 1000 * 3
-		this.combustible -= this.vel / 1000 * 2
+		this.neumaticos -= this.vel / 1000 * 30
+		this.combustible -= this.vel / 1000 * 20
 		if (this.neumaticos < 0 || this.combustible < 0) this.finalizar(2)
 
 		this.view.actualizarIndicadores(this.neumaticos, this.combustible)
@@ -205,19 +205,22 @@ class SnakeRaceControlador {
 		navigator.mediaDevices.getUserMedia({ audio: true })
 			.then(stream => {
 			console.log("Acceso al micrófono permitido.");
-			// Iniciar el reconocimiento de voz
-			this.iniciarReconocimiento();
 		})
 			.catch(error => {
 			console.error("Acceso al micrófono denegado o no disponible:", error);
 			alert("No se puede acceder al micrófono. Asegúrate de que está habilitado en tu navegador.");
 		});
+		// Iniciar el reconocimiento de voz
+		this.iniciarReconocimiento();
 	}
 
 	// Iniciar el reconocimiento de voz
 	iniciarReconocimiento() {
-		this.reconocimiento.start();
-		//console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
+		if (this.reconocimiento === undefined) {
+			alert("Tu navegador no soporta Speech Recognition. Por favor, prueba a utilizar Chrome.");
+		} else {
+			this.reconocimiento.start();
+		}
 	}
 
 	// Función para manejar los resultados del reconocimiento de voz
@@ -234,7 +237,7 @@ class SnakeRaceControlador {
 	}
 
 	leerMensaje = ( msj ) => {
-    const voz = new SpeechSynthesisUtterance(msj);
+    	const voz = new SpeechSynthesisUtterance(msj);
 
         // Opcional: Configurar el idioma
         voz.lang = 'es-ES'; // Cambia 'es-ES' a tu idioma preferido

@@ -105,7 +105,7 @@ class SnakeRaceControlador {
 	ordenarMovimiento = (direccion) => {
 		const direcciones = ['arriba', 'derecha', 'abajo', 'izquierda'];
 		
-		const index = direcciones.indexOf(direccion); // Encuentra el índice de la dirección, devuelve -1 si no está
+		const index = direcciones.indexOf(direccion); // Encuentra el índice de la dirección
 		if (index === -1) return; // Si la dirección no es válida, salimos del método
 
 		// Controlamos el giro basado en la dirección actual y la nueva dirección
@@ -147,8 +147,8 @@ class SnakeRaceControlador {
 			this.crear(this.lata)
 		}
 		//Comprobar estado
-		this.neumaticos -= this.vel / 1000 * 30
-		this.combustible -= this.vel / 1000 * 20
+		this.neumaticos -= this.vel / 1000 * 3
+		this.combustible -= this.vel / 1000 * 2
 		if (this.neumaticos < 0 || this.combustible < 0) this.finalizar(2)
 
 		this.view.actualizarIndicadores(this.neumaticos, this.combustible)
@@ -205,22 +205,19 @@ class SnakeRaceControlador {
 		navigator.mediaDevices.getUserMedia({ audio: true })
 			.then(stream => {
 			console.log("Acceso al micrófono permitido.");
+			// Iniciar el reconocimiento de voz
+			this.iniciarReconocimiento();
 		})
 			.catch(error => {
 			console.error("Acceso al micrófono denegado o no disponible:", error);
 			alert("No se puede acceder al micrófono. Asegúrate de que está habilitado en tu navegador.");
 		});
-		// Iniciar el reconocimiento de voz
-		this.iniciarReconocimiento();
 	}
 
 	// Iniciar el reconocimiento de voz
 	iniciarReconocimiento() {
-		if (this.reconocimiento === undefined) {
-			alert("Tu navegador no soporta Speech Recognition. Por favor, prueba a utilizar Chrome.");
-		} else {
-			this.reconocimiento.start();
-		}
+		this.reconocimiento.start();
+		//console.log("Reconocimiento de voz iniciado. Di 'arriba', 'derecha', 'abajo' o 'izquierda'.");
 	}
 
 	// Función para manejar los resultados del reconocimiento de voz
@@ -237,19 +234,19 @@ class SnakeRaceControlador {
 	}
 
 	leerMensaje = ( msj ) => {
-    	const voz = new SpeechSynthesisUtterance(msj);
+    const utterance = new SpeechSynthesisUtterance(msj);
 
         // Opcional: Configurar el idioma
-        voz.lang = 'es-ES'; // Cambia 'es-ES' a tu idioma preferido
+        utterance.lang = 'es-ES'; // Cambia 'es-ES' a tu idioma preferido
 
         // Opcional: Configurar el volumen, velocidad y tono
-        voz.volume = 1; // Rango de 0 a 1
-        voz.rate = 1;   // Rango de 0.1 a 10
-        voz.pitch = 1;  // Rango de 0 a 2
+        utterance.volume = 1; // Rango de 0 a 1
+        utterance.rate = 1;   // Rango de 0.1 a 10
+        utterance.pitch = 1;  // Rango de 0 a 2
 
         // Reproducir el mensaje
         if("speechSynthesis" in window){
-            window.speechSynthesis.speak(voz);
+            window.speechSynthesis.speak(utterance);
         }else console.log("EL navegador no soporta la síntesis de vod de web speech")
 	}
 
